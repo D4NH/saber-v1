@@ -1,0 +1,29 @@
+{
+  "name": "d4nh.github.io",
+  "version": "1.0.0",
+  "description": "Personal Static Site",
+  "main": "index.js",
+  "scripts": {
+    "dev": "saber",
+    "build": "saber build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://D4NH@github.com/D4NH/d4nh.github.io.git"
+  },
+  "author": "Danh Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/D4NH/d4nh.github.io/issues"
+  },
+  "homepage": "https://github.com/D4NH/d4nh.github.io#readme",
+  "dependencies": {
+    "node-sass": "^4.13.1",
+    "nprogress": "^0.2.0",
+    "prismjs": "^1.20.0",
+    "saber": "^0.11.5",
+    "saber-plugin-query-posts": "^0.4.5",
+    "sass-loader": "^8.0.2"
+  },
+  "devDependencies": {}
+}
