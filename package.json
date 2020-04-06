@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "saber",
-    "build": "saber build"
+    "build": "saber build",
+    "deploy": "cp -a public/. ~/Sites/personal/d4nh.github.io/"
   },
   "repository": {
     "type": "git",
