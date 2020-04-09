@@ -1,11 +1,12 @@
 ---
-title: Intro
-date: 2019-01-01
+title: Voorbereidingen treffen
+date: 2014-03-01
 layout: post
 categories:
   - japan
 assets:
   cover: /images/japan2014.png
+  thumbnail: https://via.placeholder.com/350x150
 ---
 
 ## Tickets geboekt, Tokyo Japan!

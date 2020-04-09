@@ -9,30 +9,29 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="col">
-          <div class="recent-posts" v-if="page.posts">
-            <ul>
-              <li v-for="post in page.posts" :key="post.permalink">
-                <hr />
-
-                <p class="mt-0">
-                  <saber-link
-                    :to="post.attributes.permalink"
-                    :title="`Read ${post.attributes.title}`"
-                    class="text-black font-extrabold"
-                  >
-                    {{ post.attributes.title }}
-                  </saber-link>
-                  <br />
-                  <small class="my-2">
-                    {{ formatDate(post.attributes.createdAt) }}
-                  </small>
-                </p>
-                <p v-html="post.attributes.excerpt"></p>
-              </li>
-            </ul>
+      <div class="row recent-posts" v-if="page.posts">
+        <div class="col-sm-4" v-for="post in page.posts" :key="post.permalink">
+          <div class="mt-0">
+            <saber-link
+              :to="post.attributes.permalink"
+              :title="`Read ${post.attributes.title}`"
+              class="text-black font-extrabold"
+            >
+              <img
+                class="mb-2"
+                :src="post.assets.thumbnail"
+                :alt="`Afbeelding van ${post.attributes.title}`">
+              <br/>
+              {{ post.attributes.title }}
+            </saber-link>
+            <br />
+            <small class="my-2">
+              {{ formatDate(post.attributes.createdAt) }}
+            </small>
+            <br />
+            <p class="category">{{ post.attributes.categories[0] }}</p>
           </div>
+          <!-- <p class="excerpt" v-html="post.attributes.excerpt"></p> -->
         </div>
       </div>
 
@@ -75,7 +74,7 @@ export default {
   methods: {
     formatDate(v) {
       const date = new Date(v);
-      return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`;
+      return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
     },
   },
 };
@@ -87,6 +86,17 @@ img[src*="#fluid"] {
   height: auto;
 }
 
+.category {
+  font-size: 12px;
+  color: grey;
+  text-transform: capitalize;
+}
+
+// .excerpt {
+//   font-size: 14px;
+//   line-height: 24px;
+// }
+
 .recent-posts {
   ul {
     margin: 0;
@@ -94,8 +104,7 @@ img[src*="#fluid"] {
     list-style: none;
   }
   a {
-    color: blue;
-    text-decoration: none;
+    color: #88c441;
   }
 }
 </style>

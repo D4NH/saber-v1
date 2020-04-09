@@ -99,8 +99,7 @@ img[src*="#fluid"] {
     list-style: none;
   }
   a {
-    color: blue;
-    text-decoration: none;
+    color: #88c441;
   }
 }
 </style>

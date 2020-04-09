@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col">
         <nav class="navbar navbar-expand-lg">
-          <a class="navbar-brand" href="/">
+          <saber-link class="navbar-brand" to="./index.md">
             <div class="media">
               <img
                 class="mr-3"
@@ -15,16 +15,16 @@
                 <small>Frontend Developer</small>
               </div>
             </div>
-          </a>
+          </saber-link>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="./about.html">Over mij</a>
+              <saber-link class="nav-link" to="./about.md">Over mij</saber-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/blog.html">Blog</a>
+              <saber-link class="nav-link" to="./blog.md">Blog</saber-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/projects.html">Projecten</a>
+              <saber-link class="nav-link" to="./projects.md">Projecten</saber-link>
             </li>
           </ul>
         </nav>
@@ -35,9 +35,9 @@
 
 <style lang="scss" scoped>
 a {
-  color: #444;
+  color: #88c441;
   &:hover {
-    color: #88c441;
+    color: #444;
   }
 }
 
@@ -52,9 +52,9 @@ a {
   &-link {
     font-size: 14px;
 
-    // &.router-link-active {
-    //   color: #88c441;
-    // }
+    &.router-link-active {
+      color: #444;
+    }
   }
 }
 

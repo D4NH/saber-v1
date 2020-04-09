@@ -1,9 +1,12 @@
 ---
 title: Tokyo International Airport, Haneda
-date: 2019-01-02
+date: 2014-09-14
 layout: post
 categories:
   - japan
+assets:
+  cover: /images/japan2014.png
+  thumbnail: https://via.placeholder.com/350x150
 ---
 
 De vlucht van Nederland naar Japan ging vrijwel probleemloos, totdat ik op Schiphol werd aangehouden vanwege mijn achternaam. Ik dacht echt wat WTF?! Gelukkig was het niks, werd al bang dat ik mijn vakantie in de gevangenis moest uitzitten.

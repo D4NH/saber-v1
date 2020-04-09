@@ -43,15 +43,7 @@ img[src*="#fluid"] {
   height: auto;
 }
 
-.recent-posts {
-  ul {
-    margin: 0;
-    padding-left: 0;
-    list-style: none;
-  }
-  a {
-    color: blue;
-    text-decoration: none;
-  }
+a {
+  color: #88c441;
 }
 </style>
