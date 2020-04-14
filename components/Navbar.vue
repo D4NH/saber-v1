@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col">
         <nav class="navbar navbar-expand-lg">
-          <saber-link class="navbar-brand" to="./index.md">
+          <saber-link class="navbar-brand" to="/">
             <div class="media">
               <img
                 class="mr-3"
@@ -18,13 +18,13 @@
           </saber-link>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <saber-link class="nav-link" to="./about.md">Over mij</saber-link>
+              <saber-link class="nav-link" to="/about.html">Over mij</saber-link>
             </li>
             <li class="nav-item">
-              <saber-link class="nav-link" to="./blog.md">Blog</saber-link>
+              <saber-link class="nav-link" to="/blog.html">Blog</saber-link>
             </li>
             <li class="nav-item">
-              <saber-link class="nav-link" to="./projects.md">Projecten</saber-link>
+              <saber-link class="nav-link" to="/projects.html">Projecten</saber-link>
             </li>
           </ul>
         </nav>

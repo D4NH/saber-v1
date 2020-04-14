@@ -1,9 +1,9 @@
 ---
 title: Voorbereidingen treffen
 date: 2014-03-01
-layout: post
+layout: page
 categories:
-  - japan
+  - japan-2014
 assets:
   cover: /images/japan2014.png
   thumbnail: https://via.placeholder.com/350x150
@@ -34,3 +34,11 @@ Als je naar Japan gaat, dan moet je gewoon naar de Tokyo Game Show. Een van de g
 ![img](https://www.danhnguyen.nl/wp-content/uploads/Screen-Shot-2014-07-16-at-10.42.17.jpg)
 
 Nog thanks aan Jaap voor de snelle handeling van de Suica pasjes! Thanks again!
+
+<style lang="scss" scroped>
+  h2 {
+    color: #88c441;
+    font-size: 20px;
+    font-weight: bold;
+  }
+</style>

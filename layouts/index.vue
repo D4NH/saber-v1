@@ -9,34 +9,29 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="col">
-          <div class="recent-posts" v-if="page.posts">
-            <ul>
-              <li v-for="post in page.posts" :key="post.permalink">
-                <hr />
-                <p class="text-3xl mt-0">
-                  <saber-link
-                    :to="post.attributes.permalink"
-                    :title="`Read ${post.attributes.title}`"
-                    class="text-black font-extrabold"
-                  >
-                    {{ post.attributes.title }}
-                  </saber-link>
-                </p>
-
-                <p v-html="post.attributes.excerpt"></p>
-
-                <p class="text-grey-darker font-medium my-2">
-                  {{ formatDate(post.attributes.createdAt) }}
-                </p>
-                <!-- <h2>
-                  {{ formatDate(post.createdAt) }} -
-                  <a :href="post.permalink">{{ post.title }}</a>
-                </h2> -->
-              </li>
-            </ul>
+      <div class="row recent-posts" v-if="page.posts">
+        <div class="col-sm-4" v-for="post in page.posts" :key="post.permalink">
+          <div class="mt-0">
+            <saber-link
+              :to="post.attributes.permalink"
+              :title="`Read ${post.attributes.title}`"
+              class="text-black font-extrabold"
+            >
+              <img
+                class="mb-2"
+                :src="post.assets.thumbnail"
+                :alt="`Afbeelding van ${post.attributes.title}`">
+              <br/>
+              {{ post.attributes.title }}
+            </saber-link>
+            <br />
+            <small class="my-2">
+              {{ formatDate(post.attributes.createdAt) }}
+            </small>
+            <br />
+            <p class="category">{{ post.attributes.categories[0].split('-')[0] }}</p>
           </div>
+          <!-- <p class="excerpt" v-html="post.attributes.excerpt"></p> -->
         </div>
       </div>
 
@@ -68,7 +63,7 @@ import Footer from "../components/Footer.vue";
 export default {
   components: {
     Navbar,
-    Footer
+    Footer,
   },
   head() {
     const pageTitle = this.page.title;
@@ -78,7 +73,7 @@ export default {
         : this.$siteConfig.title,
     };
   },
-  props: ["page"],
+  props: ['page'],
   methods: {
     formatDate(v) {
       const date = new Date(v);
@@ -89,18 +84,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .img-fluid {
-    border: 1px solid #e7e7e7;
-  }
+img[src*="#fluid"] {
+  max-width: 100%;
+  height: auto;
+}
 
-  .recent-posts {
-    ul {
-      margin: 0;
-      padding-left: 0;
-      list-style: none;
-    }
-    a {
-      color: #88c441;
-    }
+.category {
+  font-size: 12px;
+  color: grey;
+  text-transform: capitalize;
+}
+
+// .excerpt {
+//   font-size: 14px;
+//   line-height: 24px;
+// }
+
+.recent-posts {
+  ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
   }
+  a {
+    color: #88c441;
+  }
+}
 </style>

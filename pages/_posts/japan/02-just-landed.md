@@ -1,9 +1,9 @@
 ---
 title: Tokyo International Airport, Haneda
 date: 2014-09-14
-layout: post
+layout: page
 categories:
-  - japan
+  - japan-2014
 assets:
   cover: /images/japan2014.png
   thumbnail: https://via.placeholder.com/350x150
@@ -27,3 +27,11 @@ Maar goed, Ramen. Daar hadden we zin in. Maar ook daar zijn er ontzettend veel v
 DSC02933
 10599184_803783769682603_3382380813849072477_n
 Het is nu al half 4 in de nacht. Misschien toch maar even gaan slapen. Morgen begint onze eerste dag! Lots of things to do. Goodnight!
+
+<style lang="scss" scroped>
+  h2 {
+    color: #88c441;
+    font-size: 20px;
+    font-weight: bold;
+  }
+</style>

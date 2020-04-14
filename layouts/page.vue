@@ -29,7 +29,7 @@
               {{ formatDate(post.attributes.createdAt) }}
             </small>
             <br />
-            <p class="category">{{ post.attributes.categories[0] }}</p>
+            <p class="category">{{ post.attributes.categories[0].split('-')[0] }}</p>
           </div>
           <!-- <p class="excerpt" v-html="post.attributes.excerpt"></p> -->
         </div>
@@ -52,15 +52,18 @@
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Navbar from "../components/Navbar.vue";
+import Footer from "../components/Footer.vue";
 
 export default {
   components: {
     Navbar,
+    Footer,
   },
   head() {
     const pageTitle = this.page.title;

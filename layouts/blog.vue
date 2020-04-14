@@ -9,15 +9,18 @@
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Navbar from "../components/Navbar.vue";
+import Footer from "../components/Footer.vue";
 
 export default {
   components: {
     Navbar,
+    Footer
   },
   head() {
     const pageTitle = this.page.title;
@@ -31,7 +34,7 @@ export default {
   methods: {
     formatDate(v) {
       const date = new Date(v);
-      return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`;
+      return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
     },
   },
 };
